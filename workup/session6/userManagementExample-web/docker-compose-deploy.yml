@@ -1,0 +1,16 @@
+# example build as part of docker compose https://github.com/zhao-lin-li/docker-compose-build/tree/master
+
+version: "3.2"
+
+services: 
+    # http://localhost:8080/
+    # cargo deployer runs on http://localhost:8080/cargo-jetty-deployer/
+    # see https://codehaus-cargo.github.io/cargo/Jetty+Remote+Deployer.html
+    # also https://www.baeldung.com/deploy-to-jetty
+    
+    restsimulator :
+        build: .
+        ports: 
+        - "8080:8080"
+
+
